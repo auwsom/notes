@@ -22,6 +22,9 @@ sudo vim $HISTFILE
 history -a ppend to file, -c lear list, -r read and append to list, -d elete, 
 -n update from file?, -s save args to list
 history -p rint \!88 \!89 >> cmd
+* so print to cmd file, and then clear and read in to list
+sed -n '<#> p' | bash
+history -s "$(sed -n '<#> p')"
 
 **jobs
 fg, bg, ctl-Z 
