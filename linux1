@@ -23,11 +23,17 @@ history -a ppend to file, -c lear list, -r read and append to list, -d elete,
 -n update from file?, -s save args to list
 history -p rint \!88 \!89 >> cmd
 * so print to cmd file, and then clear and read in to list
+
+**running commands from file
 sed -n '<#> p' | bash
 history -s "$(sed -n '<#> p')"
+vim :set number
 
 **jobs
 fg, bg, ctl-Z 
 kill %1
 jobs -l
 kill <pid> -9
+
+**special
+sed: Stream editor
