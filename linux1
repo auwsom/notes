@@ -1,0 +1,30 @@
+
+**emacs bash
+ctl-e   end
+ctl-u   clear to beg
+ctl-w   delete word backward
+alt-d   delete word forward
+
+**history
+*! susbtitution
+!$ last word
+!42:p   print, edit see histverify
+
+
+**history settings
+help history
+alias h='history' >> .bashrc
+HISTCONTROL=ignoreboth:erasedups >> .bashrc
+shopt -s histverify >> .bashrc
+reload bashrc:  source ~/.bashrc, or . ~/.bashrc
+off: set +o history, on: set -o history
+sudo vim $HISTFILE
+history -a ppend to file, -c lear list, -r read and append to list, -d elete, 
+-n update from file?, -s save args to list
+history -p rint \!88 \!89 >> cmd
+
+**jobs
+fg, bg, ctl-Z 
+kill %1
+jobs -l
+kill <pid> -9
