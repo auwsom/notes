@@ -1,0 +1,300 @@
+
+efibootmgr -o 4,1   efibootmgr -b 9 -B
+/etc/grub.d/40_custom
+Alt F2: KRunner can search settings: Alt+Space
+terminal paste is middle mouse button, change shortcuts in Menu:Settings:Shortcuts
+undo: C-xu, delete next:  alt+d
+pageup: Shift + PageUp
+apt-get clean
+apt-get autoremove
+sudo cat /dev/null > /var/log/kern.log
+term history: ctrl+R
+blkid, lsblk, fdisk -l, df -lh, 
+rm -r mydir
+journalctl --vacuum-size=50M
+SystemMaxUse=50M
+shutdown.sh: shutdown -r now or /sbin/reboot
+sudo chown -R root:root /home/abc/reboot.sh
+dolphin: panels: terminal F4
+use info instead of man
+symlink without a terminal, just hold Shift+Ctrl and drag the file
+chmod -R 777; #!/bin/sh
+!!, !$, cd -, ll, less (q), alias, yes|, tree /dir |less, pushd popd
+locate, find . -name abc -type d -exec rm -r {} \;, **/ (zsh), egrep or grep -E, diff, more
+alias cd.='cd /home/abc'
+h='--help'; bash $h
+type man:systemctl into your browser url bar
+
+
+display>resolution
+icons: columns, small-med
+updates
+pin to task manager, sort by activity (buggy)
+FM view details
+Settings: cursor snow, single click,
+Removable Storage -> Removable Devices ->  automatically
+Kwallet: empty password
+install gufw, redshift-gtk, Vbox, Tilde editor, vbox, xscreensaver, disks gnome, BackInTime
+/usr/share/applications/redshift-gtk.desktop add Exec=redshift-gtk -l 47.6:122.2
+numlock: System Settings > Hardware > Input Devices > Keyboard
+FF>prefs: restore previous session, Delete cookies and site data when Firefox is closed
+about:config:browser.zoom.siteSpecific
+scroll amount: replug mouse reciever: https://ubuntuforums.org/showthread.php?t=2341374, logout/in, resetmsmice
+move Show Desktop to the right, lock widgets
+widgets: redshift control, system load, clock show date,
+task manager icons: right clcik 'alternatives'
+screen lock: 7mins, 300secs
+Konsole: edit default profile: black on yellow, 11pt
+shutdown timer disable: System Settings > Startup and Shutdown > Desktop Session > Disable the 'Confirm logout'
+win actions: focus mouse
+System Settings > Workspace > Shortcuts > Global Keyboard shortcuts In KDE component choose KWin
+minimize all, screen edges: https://www.reddit.com/r/kde/comments/5sel7m/is_there_a_proper_minimize_all_windows_keyboard/
+settings>task switcher options:
+special window application settings remember position, size: notes, settigns, FM
+drivers usb ethernet: https://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131
+settings: virtutal desktops: 2
+shortcuts: move window to d2: ctrl+2
+Ctrl+F1, Switch to Desktop
+task manager settings: show only tasks from current desktop
+energy saving: suspend session: 60 minutes
+device notifier: uncheck
+System Settings > Window Management > Task Switcher:
+sudo apt-get install virtualbox-guest-additions-iso
+/usr/share/virtualbox/VBoxGuestAdditions.iso then autorun.sh
+move ~/VirtualBoxVMs in GUI, then change if needed: ~/.config/VirtualBox/VirtualBox.xml
+
+gedit etc/fstab:
+mount -o rw /dev/sda4	/media/abc/cdrive	ntfs	defaults	0	0	
+mount -o rw /dev/sda7	/media/abc/iprogs	ntfs	defaults	0	0	
+mount -o rw /dev/sda9	/media/abc/6vhds	ntfs	defaults	0	0	
+mount -o rw /dev/sda6	/media/abc/kub  	ntfs	defaults	0	0	echo 
+/dev/sda4	/media/abc/cdrive	ntfs	defaults	0	0	
+/dev/sda7	/media/abc/iprogs	ntfs	defaults	0	0	
+/dev/sda9	/media/abc/6vhds	ntfs	defaults	0	0	
+/dev/sda6	/media/abc/kub  	ntfs	defaults	0	0	
+mount -o rw /dev/sdc1 /media/abc/WD
+mount -o rw /dev/sda10 /media/abc/aio
+mount -o rw /dev/sde1 /media/abc/usb1
+mount /dev/sda15 /media/abc/part1
+chmod -R 777 /media/abc/usb1/AIO
+mount -o rw /dev/sda8 /media/abc/linux2
+
+
+lower priorities:
+install and: gedit /etc/and.priorities   http://and.sourceforge.net/config-priorities.html
+https://askubuntu.com/questions/337444/how-to-increase-the-priority-for-a-task-permanently-in-linux-machine
+top   renice -n 19 <pid>   
+Exec=nice -n 19 /usr/sbin/gparted %f
+
+dolphin:
+hidden files, use common for all folders, settings: editable location bar, show full path, open arks folders, deselect right-click services
+Partition  Manager: mkdir cdrive, iprogs, edit mount points, mount
+https://askubuntu.com/questions/271516/is-there-a-program-to-mount-all-of-my-drives-automatically
+dolpnin:prefs:services:download:Dolphin Add-On Installer: duplicate
+https://store.kde.org/search/projectSearchText/copy%20path
+services: Copy path Dolphin Service Menus by rccavalcanti 
+
+win key stops working:
+plasmashell --version
+plasmashell 5.13.5
+kf5-config --version
+home:, root:
+kquitapp5 plasmashell && kstart5 plasmashell
+kwin_x11 --replace
+in .kde/Autostart folder create a file: #!/bin/bash / xmodmap -e 'keycode 133=F13'
+now you can right click on launcher and change shortkey to left super key named by F13
+setxkbmap -layout us
+
+network:
+sudo apt-get purge network-manager
+sudo apt-get update
+#sudo apt-get autoremove
+sudo apt-get upgrade
+sudo apt-get install network-manager
+apt-get install plasma-nm
+
+chroot:
+sudo mount /dev/sda14 /mnt
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+sudo chroot /mnt
+apt update
+apt upgrade
+
+chipset from default PIIX3 to ICH9 
+https://ubuntu-mate.community/t/stop-network-disconnecting-in-ubuntu/829 etc/avahi-daemon.conf .alocal
+
+
+backup: 
+rsync --progress /home/abc/* /media/abc/iprogs/kubuntu
+Auostart: Back In Time root
+sudo dpkg -l > installed_software.txt
+apt-mark showmanual > appList
+
+added since vdi:
+......git, qemu-utils, qdirstat.. gparted, zulucrypt, wine, gedit
+https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux
+
+
+
+
+change password
+
+3rd party apps?
+https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1767720 install
+https://docs.kde.org/trunk5/en/applications/fundamentals/kbd.html
+https://unix.stackexchange.com/questions/307663/change-scroll-speed-with-libinput/307932#307932
+https://askubuntu.com/questions/990611/how-to-run-dolphin-as-root nautilus, krusader,
+https://www.reddit.com/r/kde/comments/69g33o/keyboard_shorcut_to_apps_pinned_on_taskbar/
+http://blog.scoutapp.com/articles/2014/11/04/restricting-process-cpu-usage-using-nice-cpulimit-and-cgroups
+https://askubuntu.com/questions/337444/how-to-increase-the-priority-for-a-task-permanently-in-linux-machine
+http://and.sourceforge.net/config-priorities.html
+https://www.proxmox.com/en/downloads
+Missing Restore window keyboard shortcut?  Topic is solved
+https://store.kde.org/search/projectSearchText/copy%20path
+gparted upgrade
+pagefile, restore points "system volume info"
+
+set priority, progress
+
+
+
+shortcuts:
+ctrl esc: task man
+ctrl `: min all, max all
+alt tab
+alt caps: reverse (custom)
+alt `: app window grid
+win tab: activity
+win `: desktop grid
+ctrl tab: app window
+
+win pgup: max
+win pgdn: min
+ctrl pgup: tab next
+ctrl pgdn: tab prev
+https://www.reddit.com/r/kde/comments/56ao7u/meta_key_shortcut_suddenly_stopped_working_plasma/
+System Settings > Global Keyboard Shortcuts > KWin I can use Ctrl+Super+Up (Pack Window Up
+
+$ grep Num ~/.config/kglobalshortcutsrc
+ MoveWindowToCenter=Meta+Num+5,none,Move Window to Center
+Window Quick Tile Bottom=Meta+Num+2,Meta+Down,Quick Tile Window to the Bottom
+Window Quick Tile Bottom Left=Meta+Num+1,none,Quick Tile Window to the Bottom Left
+Window Quick Tile Bottom Right=Meta+Num+3,none,Quick Tile Window to the Bottom Right
+Window Quick Tile Left=Meta+Num+4,Meta+Left,Quick Tile Window to the Left
+Window Quick Tile Right=Meta+Num+6,Meta+Right,Quick Tile Window to the Right
+Window Quick Tile Top=Meta+Num+8,Meta+Up,Quick Tile Window to the Top
+Window Quick Tile Top Left=Meta+Num+7,none,Quick Tile Window to the Top Left
+Window Quick Tile Top Right=Meta+Num+9,none,Quick Tile Window to the Top Right
+
+
+
+
+
+replication: 
+VBoxManage clonehd ku1810.vhd ku1810.vdi --format vdi
+close VBox
+sudo apt install qemu-utils or qemu-kvm
+sudo modprobe nbd
+?modprobe nbd max_part=16
+sudo qemu-nbd -c /dev/nbd0 /media/abc/6vhds/ku1810.vdi
+sudo qemu-nbd -c /dev/nbd0 /media/abc/6vhds/ku1810.vdi
+ls -l /dev/nbd0*
+sudo mount -o rw /dev/nbd0p1 /media/vdi1
+mv /media/vdi1/home/abc /media/vdi1/home/abc0
+cp -r /media/abc/iprogs/kubuntu/backInTime/backintime/pc/abc/1/20190130-181216-107/backup/home/abc /media/vdi1/home/abc
+#mv  ./home/abc ./home/abc0
+cp -r  /home/abc ./home/abc1
+umount /media/vdi1
+umount -l /media/vdi1
+sudo qemu-nbd -d /dev/nbd0
+rmmod nbd
+fuser /media/abc/6vhds/ku1810.vdi
+ps 7513
+sudo chown -R $USER:$USER /home/abc
+sudo chown -R abc:abc /home/abc
+Doing Host + F1 took me to the Ctrl + Alt + F1 screen in the VM
+
+(dont know if need to install applist before moving user folder or not)
+sudo dpkg --set-selections < /home/abc/installed_software.txt
+apt-mark showmanual > appList
+echo 'apt-get install gufw, redshift-gtk, plasma-applet-redshift-control, tilde, easystroke, xscreensaver, gnome-disk-utility, backintime-qt4, git, qemu-utils, qdirstat, gparted' > appList
+apt-get install $(cat appList)
+
+
+apt-get remove --purge libreoffice*
+VBoxManage modifyhd ku1810.vdi --resize 15000
+http://derekmolloy.ie/resize-a-virtualbox-disk/ 
+http://sourceforge.net/projects/gparted/files/gparted-live-stable/
+
+windows:
+Compact.exe /CompactOS:always
+delete windows:infusedapps,livekernelreports,SoftwareDistribution
+mklink /j "C:\ProgramData" "D:\ProgramData"
+ln -s /media/abc/cdrive/ProgramData /media/abc/iprogs/ProgramData
+https://superuser.com/questions/1037557/moving-the-programdata-directory-in-windows-10-on-install
+diskpart, list disk, select disk, list volume, select volume, assign letter=i
+sfc /scannow
+
+VBoxManage controlvm "ku1810" guestmemorybaloon 2000
+du --exclude=Anaconda37 --exclude=Downloads  --exclude=AppData/Roaming/Spotify * -cksh 
+rsync -aP --exclude=Anaconda371 --exclude=Anaconda37 --exclude=Downloads --exclude=AppData/Local/Microsoft/Windows/FileHistory --exclude=AppData/Roaming/Spotify * /media/abc/iprogs/kubuntu/username/
+rsync -aP --exclude=Anaconda37 --exclude=Downloads --exclude=AppData/Roaming/Spotify --exclude=.zipline --exclude=AppData/Local/Google --exclude=AppData/Local/Spotify --exclude=AppData/Local/GitHub --exclude=AppData/Local/Apps --exclude=AppData/Local/BraveSoftware username/* Default
+rsync -aP --exclude='*' 
+
+sudo docker images
+docker save -o /media/sf_6vhds/anac3-base.tar continuumio/anaconda3
+sudo docker load -i 
+
+mkdir /media/sf_host-6vhds/tmp
+export TMPDIR=/media/sf_host-6vhds/tmp
+VBoxManage internalcommands sethduuid /media/abc/WD/0~VHDs/win10/Win10new-1-guestAdditions2.vhd
+VBoxManage modifyhd --compact /media/abc/6vhds1/Win10new-1-guestAdditions.vhd
+
+rsync -a --info=progress2 --exclude=Anaconda37 --exclude=Downloads --exclude=AppData/Roaming/Spotify --exclude=.zipline  --exclude=AppData/Local/Spotify --exclude=AppData/Local/GitHub --exclude=AppData/Local/Apps --exclude=AppData/Local/BraveSoftware username/* /media/abc/6vhds/Default
+
+
+
+After virtualbox:
+https://forum.manjaro.org/t/kde-taskbar-icons-are-too-small-not-system-tray/73533 "in the right corner there is a click area on it, a menu will appear, just select the height of the area and change the size either up or down"
+System Settings → Window Behaviour → Window Rules. ‘New…’ button. ‘Size & Position’: normal
+window rules: dialog and utility
+uname -r; dpkg --list 'linux-image*'; apt purge linux-image-x.x.x-x-generic; update-grub
+sudo apt-get install xscreensaver-gl-extra xscreensaver-data-extra
+mouse gestures in KDE bug https://bugs.kde.org/show_bug.cgi?id=343383 use EasyStroke
+Notifications: disable Discover popup (blocks other notifs)
+Plasma Search (krunner): disable software center, etc..
+Startup and shutdown -> SDDM login screen -> Change background
+Dolphin -> Control button -> Manage Toolbars -> Add actions "open in new page"; "show filter bar"; "up"
+Icons-only settings: middle cick = new instance; ungroup settings in context menu on taskbar
+Krusader: delete perm, adv: no confirms
+Chromium taskbar icon add -incognito
+backintime: find . -name .wine,snap -type d -exec rm -rf {} +
+abc: find . -name "error-sync*" -exec rm -r "{}" +
+about:config services.sync.log.appender.file.logOnError 
+
+todo:
+Removable devices?
+double click to expand vertical
+
+SDA8:
+
+
+
+on this backup partition kub1?:
+sudo apt-get install yubikey-personalization yubikey-personalization-gui
+chromium Settings-->Show Advanced Settings-->Background Apps and uncheck the "Continue running background apps when Chromium is closed" option.
+tips: nano, win-m to make mouse work
+
+
+
+new 2020ajan:
+Info Center KDE 5.13
+sudo gedit /etc/network/interfaces &
+"iface wlp2s0 inet manual"
+sudo service network-manager restart
+lost NetworkManager system tray applet -> check and uncheck the plasmoid in Configure System Tray
+nmcli dev wifi
+
+
