@@ -1,0 +1,37 @@
+sudo mdadm  
+
+mdadm -E 
+cat /proc/mdstat
+sudo mdadm --detail /dev/md0
+sudo mdadm --examine /dev/sdd1
+sudo mdadm --examine /dev/sde1
+
+https://raid.wiki.kernel.org/index.php/RAID_setup
+mdadm --create --verbose /dev/md0 --level=mirror --raid-devices=2 /dev/sdb1 /dev/sdc1
+
+sudo mdadm --stop /dev/md0
+sudo mdadm --assemble --scan
+
+
+sudo mdadm --monitor /dev/md0
+
+sudo mdadm --remove /dev/md0 /dev/sdb1
+sudo mdadm --add /dev/md0 /dev/sdb1
+sudo mdadm --re-add /dev/md0 /dev/sdb1
+
+
+
+npm install -g dispatch-proxy
+dispatch start
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu-16-04
+sudo mkfs.ntfs -F /dev/md0
+sudo mkdir -p /media/md0
+sudo mount /dev/md0 /media/md0
+
+
+if unplug by accident:
+sudo mdadm /dev/md0 --add /dev/sde1
+https://askubuntu.com/questions/304672/how-to-re-add-accidentally-removed-hard-drive-in-raid5
