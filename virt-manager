@@ -1,4 +1,4 @@
 raw partition boot:
-boot options, 
+Direct Kernel Boot options, 
 . enter kernel and initrd from /boot
 . enter BOOT_IMAGE=/boot/vmlinuz-4.18.0-14-generic root=UUID=<from Disks>
