@@ -297,8 +297,4 @@ sudo service network-manager restart
 lost NetworkManager system tray applet -> check and uncheck the plasmoid in Configure System Tray
 nmcli dev wifi
 
-EOL upgrade errors:
-Err:1 http://us.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 grub-pc amd64 2.02+dfsg1-5ubuntu8.3
-  404  Not Found
-The repositories are still available on http://old-releases.ubuntu.com/ubuntu. 
-You can change them in /etc/apt/sources.list, replacing all occurences of http://archive.ubuntu.com with http://old-releases.ubuntu.com.
+
