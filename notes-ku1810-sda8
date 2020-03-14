@@ -297,4 +297,11 @@ sudo service network-manager restart
 lost NetworkManager system tray applet -> check and uncheck the plasmoid in Configure System Tray
 nmcli dev wifi
 
-
+undelete:
+testdisk will write a huge image to home dir and overwrite lost files
+extundelete need partition to be remounted, so have to use from other OS
+photorec finds a crapton but no names but HAVE TO SELECT WRITE LOCATION IN LAST SCREEN
+photorec script to sort files https://www.cgsecurity.org/wiki/After_Using_PhotoRec
+extundelete -o /media/abc/Iprogs --restore-all --log logdata.txt /dev/sda5
+https://linoxide.com/linux-how-to/linux-recover-deleted-data-extundelete/
+https://edunham.net/2015/03/02/the_magic_of_extundelete.html  inodes filenames
