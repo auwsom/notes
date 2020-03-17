@@ -1,0 +1,61 @@
+sudo lsof -nP | grep deleted
+du -cha --max-depth=1 --exclude=/mnt / 2>/dev/null | grep -E "M|G" | sort -h
+sudo du -aBM -d 1 . | sort -nr | head 20
+du -s /*/ | sort -n
+
+sudo nice -20 sudo iotop -tbod10 > ~/iotop.log
+ps -eo "cmd,pid,min_flt,maj_flt"
+
+
+gio trash
+
+take out of trash
+photorec /Downloads or .cache
+use sudo with photorec to avoid confuseing destination dir and source
+
+sudo cpulimit -b -e "chromium-browser" -l 75
+for pid in `chromium-browser`; do echo $pid ; done
+for pid in `chromium-browser`; do echo $pid && python cpulimit.py "$pid" ; done
+sudo cpulimit -l 50 -v -b -p $(pgrep -o "chromium") & 
+https://github.com/opsengine/cpulimit/issues/39 ..it does catch child pids
+
+sudo cpulimit -l 75 -b -p $(pgrep -o "chromium") 
+~/.profile for login shells
+~/.config/autostart/
+script for all pids:https://askubuntu.com/questions/633794/is-there-a-way-to-autostart-cpulimit-in-order-to-reduce-excessive-cpu-consumptio
+kill -CONT [pid]
+ps -e -o stat,command,pid | grep '^S '  ## show stopped?
+
+index.docker.io/v1/
+
+
+
+photorec not showing cpu -> sudo top?
+
+
+you can change the scope of its permission to "Read and change all your data on the websites you visit" to "When you click on the extension" by right clicking on the extension icon.
+
+
+history -s command
+You can even bind a keystroke to do this for you. You can enter this at a Bash prompt:
+bind '"\C-q": "\C-a history -s \C-j"' >> ~/.inputrc
+
+
+sqlite3 History:
+.headers on
+.mode csv
+.output out.csv
+select datetime(last_visit_time/1000000-11644473600,'unixepoch') as 'date',url from  urls order by last_visit_time desc;
+ctl+D
+or just move file, nope have to delete from Chrome 
+
+test History file, nope
+
+ps -aef --forest
+
+
+abc       2938  2915  0 Mar14 ?        00:00:11  \_ /usr/bin/ksmserver
+abc       2966  2938  2 Mar14 ?        01:00:39  |   \_ /usr/bin/kwin_x11
+
+alias l2='!-2$
+
