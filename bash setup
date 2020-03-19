@@ -67,7 +67,15 @@ source ~/.bashrc
 # https://superuser.com/questions/247770/how-to-expand-aliases-inline-in-bash
 
 
-:'
+:' Startup Script
+/etc/init.d/skeleton for services
+sudo echo $'#!/bin/sh echo "Hi there!'>|/etc/init.d/mystartup.sh
+sudo chmod 755 /etc/init.d/mystartup.sh
+sudo update-rc.d mystartup.sh defaults
+
+'
+
+:'  Vim Style
 wget -O ~/.vim/plugin/github.vim https://raw.githubusercontent.com/acarapetis/vim-colors-github/master/colors/github.vim 
 wget -O ~/.vim/plugin/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
 :source %
