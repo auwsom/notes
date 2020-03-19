@@ -47,7 +47,7 @@ echo "alias s='sudo'">>~/.bashrc
 echo "alias srvs='systemctl'">>~/.bashrc
 echo "alias t='top'">>~/.bashrc
 echo "alias u='users'">>~/.bashrc
-echo "alias v='ls -l'">>~/.bashrc
+# echo "alias v='ls -l'">>~/.bashrc
 echo "alias x='set +o history'">>~/.bashrc  # history OFF
 # echo "alias y='reboot -t 120'">>~/.bashrc
 # echo "alias z='shutdown -t 300'">>~/.bashrc
@@ -56,6 +56,7 @@ echo "function hdn { history -d \$1; }">>~/.bashrc
 echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.bashrc
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
+echo "function ex { echo \"export \$1='\$2'\">>~/.bashrc  ; }">>~/.bashrc  ## need to rebash after using
 source ~/.bashrc
 
 # use this if .bashrc is overwritten accidentally with '>': /bin/cp /etc/skel/.bashrc ~/
