@@ -82,7 +82,8 @@ wget -O ~/.vim/plugin/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruv
 :PluginInstall
 '
 
-:'  Aliases, Functions, etc
+:' comment style = no single quotes allowed
+Aliases, Functions, etc
 # You can press Ctrl-Alt-e to perform the readline function shell-expand-line
 # ignore alias, use '\' with no space
 # list commands: compgen -a # aliases -b # built-ins -c # commands -k # keywords -A # functions
