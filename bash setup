@@ -1,4 +1,4 @@
-# wget https://gist.github.com/auwsom/804b4470d22ae00d113cbf5b4eaba73c/raw -O bashsetup ; bash bashsetup
+# wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
 echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
 echo shopt -s histverify >>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
@@ -115,5 +115,5 @@ no  =  10
 https://ss64.com/bash/
 https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index
 https://www.tldp.org/LDP/abs/html/special-chars.html   and SHORTCUTS1 <--------------------------------------------------
-ctrl-alt-e
+ctrl-alt-e https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Readline-Bare-Essentials
 COMMENT
