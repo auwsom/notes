@@ -99,9 +99,11 @@ $IFS is the (input) field separator.
 $? is the most recent foreground pipeline exit status.
 $! is the PID of the most recent background command.
 $0 is the name of the shell or shell script.
-
+no  =10
+no=  10
+no  =  10
 https://ss64.com/bash/
 https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index
-https://bash.cyberciti.biz/guide/Rules_for_Naming_variable_name
-https://www.tldp.org/LDP/abs/html/special-chars.html
+https://www.tldp.org/LDP/abs/html/special-chars.html   and SHORTCUTS1 <--------------------------------------------------
+ctrl-alt-e
 COMMENT
