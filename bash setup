@@ -44,6 +44,7 @@ echo "alias ph='popd'">>~/.bashrc
 echo "alias q='\helpany'">>~/.bashrc
 echo "alias rmd='rmdir'">>~/.bashrc
 echo "alias s='sudo'">>~/.bashrc
+echo "alias srvs='systemctl'">>~/.bashrc
 echo "alias t='top'">>~/.bashrc
 echo "alias u='users'">>~/.bashrc
 echo "alias v='ls -l'">>~/.bashrc
