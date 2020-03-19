@@ -21,7 +21,8 @@ echo "alias cpr='cp -r'">>~/.bashrc
 echo "alias ff='fg 1'">>~/.bashrc
 echo "alias e='echo'">>~/.bashrc
 echo "alias f='locate -l'">>~/.bashrc
-echo "alias fh='find . -iname'">>~/.bashrc
+echo "alias fbig='find /var/log -size +1G'">>~/.bashrc
+echo "alias f2='find . -iname'">>~/.bashrc
 echo "alias fr='find / -iname'">>~/.bashrc
 echo "alias g='grep'">>~/.bashrc
 echo "alias i='ifconfig'">>~/.bashrc
@@ -56,21 +57,13 @@ echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
 source ~/.bashrc
 
-## use this if .bashrc is overwritten accidentally with '>': /bin/cp /etc/skel/.bashrc ~/
-# list commands: compgen -c
-# list functions: declare -F, expand function, use 'type'
-## You can press Ctrl-Alt-e to perform the readline function shell-expand-line
-#echo "alias f1='function(){ps -elf | grep "$1" | grep -v grep}'">>~/.bashrc
-#f='find . \( -iname '*jpeg' -o -iname '*jpg' \) -type f -mtime -7'
-#find /var/log -size +1G
-#cp /usr/share/zoneinfo/US/Pacific /etc/localtime
-#shopt -s expand_aliases for bash scripts
-#didnt use awk, df, du, eval, exec, expr, export , lsblk, lsof, paste (cat for columns), passwd, ps, pv, reboot, sort,
-# unalias, w, watch, tac, (, ((. [, [[, https://ss64.com/bash/
+# use this if .bashrc is overwritten accidentally with '>': /bin/cp /etc/skel/.bashrc ~/
+# example f='find . \( -iname '*jpeg' -o -iname '*jpg' \) -type f -mtime -7'
+# sudo cp /usr/share/zoneinfo/US/Pacific /etc/localtime
+# shopt -s expand_aliases :for bash scripts
+# didnt use awk, df, du, eval, exec, expr, export , lsblk, lsof, paste (cat for columns), passwd, ps, pv, reboot, sort,
+# unalias, w, watch, tac
 # https://superuser.com/questions/247770/how-to-expand-aliases-inline-in-bash
-# ``, $()  substitution, (command) subshell, ((condition)) arithmetic, [condition] test
-# ignore alias, use '\' with no space
-# You can press Ctrl-Alt-e to perform the readline function shell-expand-line
 
 
 :'
@@ -80,16 +73,16 @@ wget -O ~/.vim/plugin/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruv
 :PluginInstall
 '
 
-:'
-cd ~, cd -, cd .., |,
-compgen -a # will list all the aliases you could run.
-compgen -b # will list all the built-ins you could run.
-compgen -c # will list all the commands you could run.
-compgen -k # will list all the keywords you could run.
-compgen -A function # will list all the functions you could run.
-compgen -A function -abck # will list all the above in one go.
+:'  Aliases, Functions, etc
+# You can press Ctrl-Alt-e to perform the readline function shell-expand-line
+# ignore alias, use '\' with no space
+# list commands: compgen -a # aliases -b # built-ins -c # commands -k # keywords -A # functions
+# list functions: declare -F, expand function, use 'type'
 '
-: <<'COMMENT'
+
+: <<'COMMENT'  General Commands
+cd ~, cd -, cd .., |,
+# ``, $()  substitution, (command) subshell, ((condition)) arithmetic, [condition] test
 #builtins: .	:	[	`alias	`bg	bind	break	builtin	caller	cd	command	compgen	complete	compopt	continue	declare	dirs	disown	echo	enable	eval	exec	`exit	export	false	fc	`fg	getopts	hash	`help	`history	`jobs	`kill	let	local	logout	mapfile	popd	printf	pushd	pwd	read	readarray	readonly	return	set	shift	shopt	source	suspend	test	times	trap	true	type	typeset	ulimit	umask	unalias	unset	wait
 #keywords: if	then	else	elif	fi	case	esac	for	select	while	until	do	done	in	function	time	{	}	!	[[	]]	coproc
 
@@ -106,6 +99,8 @@ $IFS is the (input) field separator.
 $? is the most recent foreground pipeline exit status.
 $! is the PID of the most recent background command.
 $0 is the name of the shell or shell script.
+
+https://ss64.com/bash/
 https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index
 https://bash.cyberciti.biz/guide/Rules_for_Naming_variable_name
 https://www.tldp.org/LDP/abs/html/special-chars.html
