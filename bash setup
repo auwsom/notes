@@ -1,0 +1,112 @@
+# wget https://gist.github.com/auwsom/804b4470d22ae00d113cbf5b4eaba73c/raw
+echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
+echo shopt -s histverify >>~/.bashrc
+echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
+echo "bind '\",,\": \"\$\"'">>~/.bashrc
+echo "bind '\",l\": \"\$_\"'">>~/.bashrc
+echo "bind '\",h\": \"--help\"'">>~/.bashrc
+echo "alias vimbash='vim ~/.bashrc'">>~/.bashrc
+echo "alias rebash='source ~/.bashrc'">>~/.bashrc
+echo "export B=~/.bashrc">>~/.bashrc
+source ~/.bashrc
+echo "alias rm='rm -I'">>~/.bashrc
+echo "alias h='history'">>~/.bashrc
+echo "alias hh='history | tail -30'">>~/.bashrc
+echo "alias rb='source ~/.bashrc'">>~/.bashrc
+echo "alias a='alias'">>~/.bashrc
+echo "alias b='bg 1'">>~/.bashrc
+echo "alias c='cat'">>~/.bashrc
+echo "alias up='cd ..'">>~/.bashrc
+echo "alias cpr='cp -r'">>~/.bashrc
+echo "alias ff='fg 1'">>~/.bashrc
+echo "alias e='echo'">>~/.bashrc
+echo "alias f='locate -l'">>~/.bashrc
+echo "alias fh='find . -iname'">>~/.bashrc
+echo "alias fr='find / -iname'">>~/.bashrc
+echo "alias g='grep'">>~/.bashrc
+echo "alias i='ifconfig'">>~/.bashrc
+echo "export h='--help'">>~/.bashrc
+echo "alias j='jobs'">>~/.bashrc
+echo "alias k='kill'">>~/.bashrc
+echo "alias ls='ls -F'">>~/.bashrc
+echo "alias la='ls -A'">>~/.bashrc
+echo "alias ll='ls -alF'">>~/.bashrc
+echo "alias kk='kill %1'">>~/.bashrc
+echo "alias kkk='kill -TERM %1'">>~/.bashrc
+echo "alias m='mkdir'">>~/.bashrc
+echo "alias mo='more'">>~/.bashrc
+echo "alias n='touch'">>~/.bashrc
+echo "alias o='set -o history'">>~/.bashrc  # history ON
+echo "alias p='pushd'">>~/.bashrc
+echo "alias pe='printenv'">>~/.bashrc
+echo "alias ph='popd'">>~/.bashrc
+echo "alias q='\helpany'">>~/.bashrc
+echo "alias rmd='rmdir'">>~/.bashrc
+echo "alias s='sudo'">>~/.bashrc
+echo "alias t='top'">>~/.bashrc
+echo "alias u='users'">>~/.bashrc
+echo "alias v='ls -l'">>~/.bashrc
+echo "alias x='set +o history'">>~/.bashrc  # history OFF
+# echo "alias y='reboot -t 120'">>~/.bashrc
+# echo "alias z='shutdown -t 300'">>~/.bashrc
+echo "function hd { for i in \$(seq 1 \$1); do history -d \$((\$HISTCMD-1)); done; }">>~/.bashrc
+echo "function hdn { history -d \$1; }">>~/.bashrc
+echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.bashrc
+echo "function rnm { mv \$1 \$2; }">>~/.bashrc
+echo "export l='\$_'">>~/.bashrc
+source ~/.bashrc
+
+## use this if .bashrc is overwritten accidentally with '>': /bin/cp /etc/skel/.bashrc ~/
+# list commands: compgen -c
+# list functions: declare -F, expand function, use 'type'
+## You can press Ctrl-Alt-e to perform the readline function shell-expand-line
+#echo "alias f1='function(){ps -elf | grep "$1" | grep -v grep}'">>~/.bashrc
+#f='find . \( -iname '*jpeg' -o -iname '*jpg' \) -type f -mtime -7'
+#find /var/log -size +1G
+#cp /usr/share/zoneinfo/US/Pacific /etc/localtime
+#shopt -s expand_aliases for bash scripts
+#didnt use awk, df, du, eval, exec, expr, export , lsblk, lsof, paste (cat for columns), passwd, ps, pv, reboot, sort,
+# unalias, w, watch, tac, (, ((. [, [[, https://ss64.com/bash/
+# https://superuser.com/questions/247770/how-to-expand-aliases-inline-in-bash
+# ``, $()  substitution, (command) subshell, ((condition)) arithmetic, [condition] test
+# ignore alias, use '\' with no space
+# You can press Ctrl-Alt-e to perform the readline function shell-expand-line
+
+
+:'
+wget -O ~/.vim/plugin/github.vim https://raw.githubusercontent.com/acarapetis/vim-colors-github/master/colors/github.vim 
+wget -O ~/.vim/plugin/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+:source %
+:PluginInstall
+'
+
+:'
+cd ~, cd -, cd .., |,
+compgen -a # will list all the aliases you could run.
+compgen -b # will list all the built-ins you could run.
+compgen -c # will list all the commands you could run.
+compgen -k # will list all the keywords you could run.
+compgen -A function # will list all the functions you could run.
+compgen -A function -abck # will list all the above in one go.
+'
+: <<'COMMENT'
+#builtins: .	:	[	`alias	`bg	bind	break	builtin	caller	cd	command	compgen	complete	compopt	continue	declare	dirs	disown	echo	enable	eval	exec	`exit	export	false	fc	`fg	getopts	hash	`help	`history	`jobs	`kill	let	local	logout	mapfile	popd	printf	pushd	pwd	read	readarray	readonly	return	set	shift	shopt	source	suspend	test	times	trap	true	type	typeset	ulimit	umask	unalias	unset	wait
+#keywords: if	then	else	elif	fi	case	esac	for	select	while	until	do	done	in	function	time	{	}	!	[[	]]	coproc
+
+awk stands for Aho, Weinberger, Kernighan does Find and Replace text, database sort/validate/index
+https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02
+$1, $2, $3, ... are the positional parameters.
+"$@" is an array-like construct of all positional parameters, {$1, $2, $3 ...}.
+"$*" is the IFS expansion of all positional parameters, $1 $2 $3 ....
+$# is the number of positional parameters.
+$- current options set for the shell.
+$$ pid of the current shell (not subshell).
+$_ most recent parameter (or the abs path of the command to start the current shell immediately after startup).
+$IFS is the (input) field separator.
+$? is the most recent foreground pipeline exit status.
+$! is the PID of the most recent background command.
+$0 is the name of the shell or shell script.
+https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index
+https://bash.cyberciti.biz/guide/Rules_for_Naming_variable_name
+https://www.tldp.org/LDP/abs/html/special-chars.html
+COMMENT
