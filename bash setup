@@ -1,4 +1,4 @@
-# wget https://gist.github.com/auwsom/804b4470d22ae00d113cbf5b4eaba73c/raw
+# wget https://gist.github.com/auwsom/804b4470d22ae00d113cbf5b4eaba73c/raw -O bashsetup ; bash bashsetup
 echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
 echo shopt -s histverify >>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
