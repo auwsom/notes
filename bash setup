@@ -25,7 +25,7 @@ echo "alias up='cd ..'">>~/.bashrc
 echo "alias cpr='cp -r'">>~/.bashrc
 echo "alias ff='fg 1'">>~/.bashrc
 echo "alias e='echo'">>~/.bashrc
-echo "alias f='locate -l'">>~/.bashrc
+# echo "alias f='locate -l'">>~/.bashrc  # doesnt work on Docker ubuntu
 echo "alias fbig='find /var/log -size +1G'">>~/.bashrc
 echo "alias f2='find . -iname'">>~/.bashrc
 echo "alias fr='find / -iname'">>~/.bashrc
@@ -56,6 +56,7 @@ echo "alias u='users'">>~/.bashrc
 echo "alias x='set +o history'">>~/.bashrc  # history OFF
 # echo "alias y='reboot -t 120'">>~/.bashrc
 # echo "alias z='shutdown -t 300'">>~/.bashrc
+echo "function f { find \$1 -iname \$2; }">>~/.bashrc
 echo "function hd { for i in \$(seq 1 \$1); do history -d \$((\$HISTCMD-1)); done; }">>~/.bashrc
 echo "function hdn { history -d \$1; }">>~/.bashrc
 echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.bashrc
@@ -65,6 +66,8 @@ echo "function ex { echo \"export \$1='\$2'\">>~/.bashrc  ; }">>~/.bashrc  ## ne
 source ~/.bashrc
  set -o history
 
+# sed -i /^'alias f'/d ~/.bashrc
+# use to test escaped function: $'function f { find \$1 . -iname \$2; done; }'  ??
 # use this if .bashrc is overwritten accidentally with '>': /bin/cp /etc/skel/.bashrc ~/
 # example f='find . \( -iname '*jpeg' -o -iname '*jpg' \) -type f -mtime -7'
 # sudo cp /usr/share/zoneinfo/US/Pacific /etc/localtime
