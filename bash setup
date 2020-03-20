@@ -1,5 +1,6 @@
 # wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
+source ~/.bashrc
 echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
 echo "HISTIGNORE='&:ls:[bf]g:exit:pwd:clear:mount:umount'" >>~/.bashrc #
 echo shopt -s histverify >>~/.bashrc
