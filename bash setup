@@ -1,14 +1,13 @@
 # wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
 echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
-echo HISTIGNORE='&:ls:[bf]g:exit:pwd:clear:mount:umount' >>~/.bashrc #
+echo "HISTIGNORE='&:ls:[bf]g:exit:pwd:clear:mount:umount'" >>~/.bashrc #
 echo shopt -s histverify >>~/.bashrc
 shopt -s checkwinsize >>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
 echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
 echo "bind '\",l\": \"\$_\"'">>~/.bashrc
 echo "bind '\",h\": \"--help\"'">>~/.bashrc
-echo "bind bind "',ll'='\!-2:\$'"">>~/.bashrc
 echo "alias vimbash=' vim ~/.bashrc'">>~/.bashrc
 echo "alias rebash=' source ~/.bashrc'">>~/.bashrc
 echo export B=~/.bashrc>>~/.bashrc
