@@ -1,5 +1,6 @@
 # wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
 echo HISTCONTROL=ignoreboth:erasedups >>~/.bashrc #
+echo HISTIGNORE='&:ls:[bf]g:exit:pwd:clear:mount:umount' >>~/.bashrc #
 echo shopt -s histverify >>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
 echo "bind '\",,\": \"\$\"'">>~/.bashrc
@@ -13,18 +14,18 @@ echo "alias rm='rm -I'">>~/.bashrc
 echo "alias h=' history'">>~/.bashrc
 echo "alias hh=' history | tail -30'">>~/.bashrc
 echo "alias a=' alias'">>~/.bashrc
-echo "alias b='bg 1'">>~/.bashrc
+echo "alias b=' bg 1'">>~/.bashrc
 echo "alias c=' cat'">>~/.bashrc
 echo "alias up=' cd ..'">>~/.bashrc
 echo "alias cpr='cp -r'">>~/.bashrc
-echo "alias ff='fg 1'">>~/.bashrc
+echo "alias ff=' fg 1'">>~/.bashrc
 echo "alias e=' echo'">>~/.bashrc
 echo "alias f=' locate -l'">>~/.bashrc
 echo "alias fbig=' find /var/log -size +1G'">>~/.bashrc
 echo "alias f2=' find . -iname'">>~/.bashrc
 echo "alias fr=' find / -iname'">>~/.bashrc
 echo "alias g='grep'">>~/.bashrc
-echo "alias i='ifconfig'">>~/.bashrc
+echo "alias i=' ifconfig'">>~/.bashrc
 echo "export h='--help'">>~/.bashrc
 echo "alias j=' jobs'">>~/.bashrc
 echo "alias k=' kill'">>~/.bashrc
@@ -43,7 +44,7 @@ echo "alias pp=' popd'">>~/.bashrc
 echo "alias q=' \helpany'">>~/.bashrc
 echo "alias rmd='rmdir'">>~/.bashrc
 echo "alias s='sudo'">>~/.bashrc
-echo "alias sc='systemctl'">>~/.bashrc
+echo "alias sc='sudo systemctl'">>~/.bashrc
 echo "alias t='touch'">>~/.bashrc
 echo "alias u='users'">>~/.bashrc
 # echo "alias v=' ls -l'">>~/.bashrc
