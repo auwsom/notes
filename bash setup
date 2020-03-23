@@ -60,6 +60,7 @@ echo "function f { find \$1 -iname \$2; }">>~/.bashrc
 echo "function hd { for i in \$(seq 1 \$1); do history -d \$((\$HISTCMD-1)); done; }">>~/.bashrc
 echo "function hdn { history -d \$1; }">>~/.bashrc
 echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.bashrc
+echo "function k { kill %\$1; }">>~/.bashrc  # preface with '\' to specify function instead of alias
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
 echo "function ex { echo \"export \$1='\$2'\">>~/.bashrc  ; }">>~/.bashrc  ## need to rebash after using
