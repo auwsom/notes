@@ -2,9 +2,9 @@
  set +o history && sleep 1
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
 source ~/.bashrc ; exec bash ## have to restart shell to enter the bindings without recursion
-#echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
-#echo "bind '\",l\": \"\$_\"'">>~/.bashrc
-#echo "bind '\",h\": \"--help\"'">>~/.bashrc
+echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
+echo "bind '\",l\": \"\$_\"'">>~/.bashrc
+echo "bind '\",h\": \"--help\"'">>~/.bashrc
 echo HISTCONTROL=ignoreboth >>~/.bashrc # :erasedups will change numbering, using HISTIGNORE
 echo "HISTIGNORE='&:ls:ls:ll:[bf]g:exit:pwd:clear:mount:umount:rebash:vimbash'" >>~/.bashrc #
 echo "HISTIGNORE='a:b:c:d:e:f:ff:f2:fr:fbig:g:h:hh:i:j:k:k:kt:l:mo:n:o:p:pe:pp:q:r:u:up:v:x'" >>~/.bashrc #
