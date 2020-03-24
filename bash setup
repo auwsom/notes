@@ -1,5 +1,5 @@
 # wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
- (set +o history) && sleep 1
+ (set +o history) # have to run separately
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
 source ~/.bashrc ; exec bash ## have to restart shell to enter the bindings without recursion
 echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
@@ -64,6 +64,7 @@ echo "function k { kill %\$1; }">>~/.bashrc  # preface with '\' to specify funct
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
 echo "function ex { echo \"export \$1='\$2'\">>~/.bashrc  ; }">>~/.bashrc  ## need to rebash after using
+echo $"\n">>~/.bashrc  
 source ~/.bashrc
  set -o history
 
