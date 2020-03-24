@@ -1,5 +1,5 @@
 # wget https://raw.githubusercontent.com/auwsom/notes/master/bash%20setup -O bashsetup ; bash bashsetup
- set +o history && sleep 1
+ (set +o history) && sleep 1
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
 source ~/.bashrc ; exec bash ## have to restart shell to enter the bindings without recursion
 echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
