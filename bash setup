@@ -33,7 +33,7 @@ echo "alias f2='find . -iname'">>~/.bashrc
 echo "alias fr='find / -iname'">>~/.bashrc
 echo "alias g='grep'">>~/.bashrc
 echo "alias i='ifconfig'">>~/.bashrc
-echo "export h='--help'">>~/.bashrc
+# echo "export h=\'--help\'">>~/.bashrc
 echo "alias j='jobs'">>~/.bashrc
 echo "alias k='kill'">>~/.bashrc
 echo "alias ls='ls -F'">>~/.bashrc
@@ -64,8 +64,7 @@ echo "function hdn { history -d \$1; }">>~/.bashrc
 echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.bashrc
 echo "function k { kill %\$1; }">>~/.bashrc  # preface with '\' to specify function instead of alias
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
-echo "export l='\$_'">>~/.bashrc
-echo "function exp { echo \"export \$1\">>/.bashrc }">>~/.bashrc   ## need to rebash after using
+echo "function exp { echo \"export \$1\">>/.bashrc; }">>~/.bashrc   ## need to rebash after using
 printf "\n">>~/.bashrc  # use printf for more expected behavior 
 source ~/.bashrc
  set -o history
