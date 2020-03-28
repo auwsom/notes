@@ -18,6 +18,8 @@ echo "alias rm='rm -I'">>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
 echo "alias h='history'">>~/.bashrc
 echo "alias hh='history | tail -30'">>~/.bashrc
+echo "alias hoff='set +o history'">>~/.bashrc  # history OFF
+echo "alias hon='set -o history'">>~/.bashrc  # history ON
 echo "alias a='alias'">>~/.bashrc
 echo "alias b='bg 1'">>~/.bashrc
 echo "alias c='cat'">>~/.bashrc
@@ -42,7 +44,7 @@ echo "alias kt='kill -TERM %1'">>~/.bashrc
 echo "alias m='mkdir'">>~/.bashrc
 echo "alias mo='more'">>~/.bashrc
 # echo "alias n='touch'">>~/.bashrc
-echo "alias o='set -o history'">>~/.bashrc  # history ON
+# echo "alias o=''">>~/.bashrc  # history ON
 echo "alias p='pushd'">>~/.bashrc
 echo "alias pe='printenv'">>~/.bashrc
 echo "alias pp='popd'">>~/.bashrc
@@ -53,7 +55,7 @@ echo "alias sc='sudo systemctl'">>~/.bashrc
 echo "alias t='touch'">>~/.bashrc
 echo "alias u='users'">>~/.bashrc
 # echo "alias v='ls -l'">>~/.bashrc
-echo "alias x='set +o history'">>~/.bashrc  # history OFF
+# echo "alias x=''">>~/.bashrc  
 # echo "alias y='reboot -t 120'">>~/.bashrc
 # echo "alias z='shutdown -t 300'">>~/.bashrc
 echo "function f { find \$1 -iname \$2; }">>~/.bashrc
