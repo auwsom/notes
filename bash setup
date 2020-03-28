@@ -3,7 +3,7 @@
 sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.bashrc; sed -i /^export/d ~/.bashrc ## remove old
 source ~/.bashrc ; exec bash ## have to restart shell to enter the bindings without recursion
 echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
-echo "bind '\",l\": \"\$_\"'">>~/.bashrc
+echo "bind '\",l\": \"\!$\"'">>~/.bashrc
 echo "bind '\",h\": \"--help\"'">>~/.bashrc
 echo HISTCONTROL=ignoreboth >>~/.bashrc # :erasedups will change numbering, using HISTIGNORE
 echo "HISTIGNORE='[bf]g:exit:pwd:clear:mount:umount:rebash:vimbash'" >>~/.bashrc #
@@ -63,8 +63,8 @@ echo "function helpany { \$1 --help || help \$1 || man \$1 || info \$1; }">>~/.b
 echo "function k { kill %\$1; }">>~/.bashrc  # preface with '\' to specify function instead of alias
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
-echo "function exp { echo \"export \$1">>~/.bashrc  ; }">>~/.bashrc  ## need to rebash after using
-echo $"\n">>~/.bashrc  
+echo "function exp { echo \"export \$1\">>/.bashrc }">>~/.bashrc   ## need to rebash after using
+printf "\n">>~/.bashrc  
 source ~/.bashrc
  set -o history
 
