@@ -64,7 +64,7 @@ echo "function k { kill %\$1; }">>~/.bashrc  # preface with '\' to specify funct
 echo "function rnm { mv \$1 \$2; }">>~/.bashrc
 echo "export l='\$_'">>~/.bashrc
 echo "function exp { echo \"export \$1\">>/.bashrc }">>~/.bashrc   ## need to rebash after using
-printf "\n">>~/.bashrc  
+printf "\n">>~/.bashrc  # use printf for more expected behavior 
 source ~/.bashrc
  set -o history
 
