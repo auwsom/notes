@@ -78,13 +78,17 @@ source ~/.bashrc
 # unalias, w, watch, tac
 # https://superuser.com/questions/247770/how-to-expand-aliases-inline-in-bash
 
+:'
+grep 'login keyring' /var/log/auth.log | grep -v "sudo"
+tac /var/log/auth.log | mo
+(tail -F -n0 /root/Lean/Launcher/bin/Debug/nohup.out) | grep --color=auto --line-buffered "56" | while read message; do echo  | mail -s "did2" xxasdqwe@gmail.com ; done &
+'
 
 :' Startup Script
 /etc/init.d/skeleton for services
 sudo echo $'#!/bin/sh echo "Hi there!'>|/etc/init.d/mystartup.sh
 sudo chmod 755 /etc/init.d/mystartup.sh
 sudo update-rc.d mystartup.sh defaults
-
 '
 
 :'  Vim Style
@@ -100,6 +104,9 @@ Aliases, Functions, etc
 # ignore alias, use '\' with no space
 # list commands: compgen -a # aliases -b # built-ins -c # commands -k # keywords -A # functions
 # list functions: declare -F, expand function, use 'type'
+History Refresh from other terminal, append clear read
+export PROMPT_COMMAND='history -a;history -c;history -r'
+vim $HISTFILE ; ..; history -c;history -r
 '
 
 : <<'COMMENT'  General Commands
