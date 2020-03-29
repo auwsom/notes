@@ -52,10 +52,12 @@ or just move file, nope have to delete from Chrome
 test History file, nope
 
 ps -aef --forest
-
-
 abc       2938  2915  0 Mar14 ?        00:00:11  \_ /usr/bin/ksmserver
 abc       2966  2938  2 Mar14 ?        01:00:39  |   \_ /usr/bin/kwin_x11
 
-alias l2='!-2$
+sudo cp /usr/share/ksysguard/ProcessTable.sgrd /home/abc/.local/share/ksysguard/ProcessTable.sgrd
+sudo cp /usr/share/ksysguard/SystemLoad2.sgrd /home/abc/.local/share/ksysguard/SystemLoad2.sgrd
 
+redshift -O 5000
+vim .config/redshift.conf
+https://askubuntu.com/questions/857799/alternatives-for-f-lux-redshift
