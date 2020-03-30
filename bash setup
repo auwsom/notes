@@ -6,7 +6,7 @@ echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
 echo "bind '\",l\": \"\!\$\"'">>~/.bashrc
 echo "bind '\"ll\": \"\!\$\"'">>~/.bashrc
 #echo "function l { !-$1\$; }">>~/.bashrc
-echo "alias ll='\!-2\$'">>~/.bashrc  ## need to remove the first \ on these, but ! wil lbe expanded without it
+echo "alias l2='\!-2\$'">>~/.bashrc  ## need to remove the first \ on these, but ! wil lbe expanded without it
 echo "alias l3='\!-3\$'">>~/.bashrc
 echo "alias l4='\!-4\$'">>~/.bashrc
 echo "alias l5='\!-5\$'">>~/.bashrc
