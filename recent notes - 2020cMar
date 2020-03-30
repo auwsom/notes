@@ -61,3 +61,9 @@ sudo cp /usr/share/ksysguard/SystemLoad2.sgrd /home/abc/.local/share/ksysguard/S
 redshift -O 5000
 vim .config/redshift.conf
 https://askubuntu.com/questions/857799/alternatives-for-f-lux-redshift
+
+sudo systemctl disable/enable virtualbox
+
+edit your /etc/default/docker file with the -g option: DOCKER_OPTS="-dns 8.8.8.8 -dns 8.8.4.4 -g /media/abc/6vhds/docker"
+
+todo: docker copy autooff.sh from foundation to f4, and schedule midnight off
