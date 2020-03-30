@@ -63,6 +63,8 @@ vim .config/redshift.conf
 https://askubuntu.com/questions/857799/alternatives-for-f-lux-redshift
 
 sudo systemctl disable/enable virtualbox
+swapon /dev/sda8
+swapon -s
 
 edit your /etc/default/docker file with the -g option: DOCKER_OPTS="-dns 8.8.8.8 -dns 8.8.4.4 -g /media/abc/6vhds/docker"
 
