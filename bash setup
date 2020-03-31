@@ -4,7 +4,6 @@ sed -i /^alias/d ~/.bashrc; sed -i /^bind/d ~/.bashrc; sed -i /^function/d ~/.ba
 source ~/.bashrc ; exec bash ## have to restart shell to enter the bindings without recursion
 echo "bind '\",,\": \"\$\"'">>~/.bashrc   ## unbind -r ,, to remove
 echo "bind '\",l\": \"\!\$\"'">>~/.bashrc
-echo "bind '\"ll\": \"\!\$\"'">>~/.bashrc
 #echo "function l { !-$1\$; }">>~/.bashrc
 echo "alias l2='\!-2\$'">>~/.bashrc  ## need to remove the first \ on these, but ! wil lbe expanded without it
 echo "alias l3='\!-3\$'">>~/.bashrc
