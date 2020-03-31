@@ -18,7 +18,7 @@ echo "alias vimbash=' vim ~/.bashrc'">>~/.bashrc
 echo "alias rebash=' source ~/.bashrc'">>~/.bashrc
 echo export B=~/.bashrc>>~/.bashrc
 source ~/.bashrc
-echo "alias rm='rm -I'">>~/.bashrc
+echo "alias rm='rm -Ir'">>~/.bashrc
 echo set -o noclobber>>~/.bashrc  ## use >| to force redirection even with noclobber
 echo "alias h='history'">>~/.bashrc
 echo "alias hh='history | tail -30'">>~/.bashrc
