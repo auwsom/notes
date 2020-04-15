@@ -1,7 +1,71 @@
 sync extensions
 ublock:  restore backup file
- advanced
- whitelist cloud.net
- allow all 1st party, block all 3rd party
+ advanced,  whitelist cloud.net,  allow all 1st party, block all 3rd party
+cookie autodel: listofexpressions export import
 settings > Privacy > site settings > notifs > blocked
- 
+
+extensions:
+ext allow in incog:
+ ublock, badger?, quickey, cookie autodel, tusk, markdown
+extensions manager
+quickeys, shortkeys
+undo closed tabs button: 20 limit
+location guard
+focus indicator: 4
+
+chrome://extensions/shortcuts
+tusk: cttl+shft+spac
+
+doesnt work for extensions?:
+default/preferences 
+inotifywait -mr -e modify -e create -e delete -e CLOSE_WRITE .
+
+
+Bookmarks Organizer Offered by: kadaj, fucked up the order cant get back
+
+
+aapocclcgogkmnckokdopfmhonfmgoek : Slides : version 0_10
+adakfpemmbngeohfigfpldjimamijoek : Settings Button : version 0_2
+ahfgeienlihckogmohjhadlkjgocpleb : Web Store : version 0_2
+ahjaciijnoiaklcomgnblndopackapon : Identity API Scope Approval UI : version 1_1
+aohghmighlieiainnegkcijnfilokake : Docs : version 0_10
+apdfllckaahabafndbhieahigkjlhalf : Google Drive : version 14_2
+blpcfgokakmgnkcojhhkbfbldkacnbeo : YouTube : version 4_2_8
+cfohepagpmnodfdmjliccbbigdkfcgia : Location Guard : version 2_4_0
+cjpalhdlnbpafiamejdnhcphjbkeiagm : uBlock Origin : version 1_24_4
+cmeckkgeamghjhkepejgjockldoblhcb : Export links of all extensions : version 1_4
+cobieddmkhhnbeldhncnfcgcaccmehgn : CLUT: Cycle Last Used Tabs : version 1_6
+dkcdcmananochmgmhgkhhmgegdnkgejl : Bookmark My Tabs : version 1_0_0
+eaabmhkokgaboihbikohlooneokghmcp : Bookmarks Table : version 0_6
+eookhngofldnbnidjlbkeecljkfpmfpg : better-onetab : version 1_4_7
+fdpohaocaechififmbbbbbknoalclacl : Full Page Screen Capture : version 6_5
+felcaaldnbdncclmgdcncolpebgiejap : Sheets : version 1_2
+ffieaadkkhencgelmgbbmkkipeocbcbg : Bookmarks Button : version 1_3
+fhcgjolkccmbidfldomjliifgaodjagh : Cookie AutoDelete : version 3_1_1
+fmhmiaejopepamlcjkncpgpdjichnecm : KeePass Tusk - Password Access and Autofill : version 2018_9_27
+fofpnhmbgmmeaialapfddhbhfongoinh : History Button : version 1_0_1
+gfdkimpbcpahaombhbimeihdjnejgicl : Feedback : version 1_0
+ghbmnnjooekpmoecnnnilnnbdlolhkhi : Google Docs Offline : version 1_9_1
+heeoeadndnhebmfebjccbhmccmaoedlf : Focus Indicator : version 3_0_0
+hfpnjihjndnmfcbclplooodjmhcdncan : Extensions Button : version 0_2
+iaiomicjabeggjcfkbimgmglanimpnae : Tab Session Manager : version 6_0_0
+ieehkmoiljghfkejgahoheemdjpdinml : Undo Closed Tabs Button : version 0_1_6
+jjchodckpgecejjbbdedboikbidieebe : Reopen closed tab Button™ : version 0_9_1_3
+kaalofacklcidaampbokdplbklpeldpj : Wide Github : version 1_4_1
+kafbpkaodnkapgalobfodcpbioffcngc : Speak : version 4
+kgadgjmlofjccpefhdagbonmohjknlll : Markdown Linker : version 0_2_4
+kmendfapggjehodndflmmgagdbamhnfd : CryptoTokenExtension : version 0_9_74
+ldlghkoiihaelfnggonhjnfiabmaficg : QuicKey – The quick tab switcher : version 1_4_0
+lkglfdjcamhjoggmabobhggmpfjhccff : TidyTab : version 3_0_0
+lpleipinonnoibneeejgjnoeekmbopbc : Extensions Manager (aka Switcher) : version 0_2_1_2
+mfehgcgbbipciphmccgaenjidiccnmng : Cloud Print : version 0_1
+mhjfbmdgcfjbbpaeojofohoefgiehjai : Chrome PDF Viewer : version 1
+mmdmdndlbdblbjdphkpfbcpfmfjlcfjk : Bookmarks by date : version 1_2
+neajdppkdcdipfabeoofebfddakdcjhd : Google Network Speech : version 1_0
+nkeimhogjdpnpccoofpliimaahmaaome : Google Hangouts : version 1_3_15
+nmmhkkegccagdldgiimedpiccmgmieda : Chrome Web Store Payments : version 1_0_0_5
+ohhpijmpbgndokpodomgiclmflhbkihb : Starmarks Bookmark Manager : version 0_1_2
+oifbkkngkecdhnohciofdofiihdjciip : Copy as Markdown Quotation : version 0_5_0
+pjkljhegncpnkpknbcohdijeoejaedia : Gmail : version 8_2
+pkedcjkdefgpdelpbcmbmeomcjbeemfm : Chrome Media Router : version 8220_313_1_1
+pkehgijcmpdhfbdbbnkijodmdjhbjlgp : Privacy Badger : version 2020_2_19
