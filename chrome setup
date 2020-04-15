@@ -10,7 +10,7 @@ ext allow in incog:
 extensions manager
 quickeys, shortkeys
 undo closed tabs button: 20 limit
-location guard
+location guard; fixed seattle or high
 focus indicator: 4
 
 chrome://extensions/shortcuts
@@ -22,8 +22,10 @@ inotifywait -mr -e modify -e create -e delete -e CLOSE_WRITE .
 
 
 Bookmarks Organizer Offered by: kadaj, fucked up the order cant get back
+https://superuser.com/questions/1180286/google-chrome-bookmark-folders-can-you-undo-reorder-by-title/1542328#1542328
 
-
+"Export links of all extensions": 
+https://chrome.google.com/webstore/detail/export-links-of-all-exten/cmeckkgeamghjhkepejgjockldoblhcb?hl=en
 <!--
 ......................................................
                      Enabled
