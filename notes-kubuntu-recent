@@ -1,0 +1,128 @@
+list only hidden: ll -d .*
+
+echo "set number">>~/.vimrc 
+
+
+After GDoc notes move:
+virtualenv -p python3 --system-site-packages ~/envs/qc   #also py3 sci3 qc
+source envs/qc/bin/activate
+need to clean out Downloads in abc123.iso 
+same as in v, pretty sure
+
+
+sudo apt-get install -y inotify-tools
+sudo inotifywait -m -r --exclude "(/tmp.*|/var/cache.*|/dev/pts/|/var/log.*)"  -e MOVED_TO -e CREATE -e CLOSE_WRITE -e DELETE -e MODIFY -o /inotify.log /
+sudo inotifywait -m -r --exclude "(~/.config/chromium)"  -e MOVED_TO -e CREATE -e CLOSE_WRITE -e DELETE -e MODIFY -o /inotify.log ~/.kde ~/.config
+inotifywait -m -r -e MOVED_TO -e CREATE -e CLOSE_WRITE -e DELETE -e MODIFY ~/.config ~/.kde
+inotifywait -mr --exclude '(.chromium)' -e modify -e create -e delete  ~/.config ~/.kde
+
+
+
+sudo usermod -a -G docker $USER
+sudo -i
+
+mv /var/lib/docker /media/veracrypt5
+swap args:  ln -s  !:2 !:1
+ln -s /media/veracrypt5/docker /var/lib/docker
+systemctl restart docker # have to restart
+
+
+
+/home/ffff0909ffff0909/autooff.sh   festive_shaw
+ 
+sudo apt install kubuntu-desktop
+https://askubuntu.com/questions/876240/how-to-automate-setting-up-of-keyboard-configuration-package
+ 
+jupyter notebook --ip=127.0.0.1 --port=8888 --allow-root
+d create -it -p 8888:8888 dac529c370b1 '/opt/miniconda3/bin/jupyter notebook --ip=127.0.0.1 --port=8888 --allow-root'
+
+jupyter_scipy-notebook_plotly
+docker create -it -e GRANT_SUDO=yes --user root  -v /media/veracrypt5/work:/work jupyter/scipy-notebook
+docker run -it -p 8888:8888 -e GRANT_SUDO=yes --user root -e JUPYTER_ENABLE_LAB=yes -v /media/veracrypt5/work:/home/jovyan/w ffff0909/qc:jsci1
+docker run -it --rm -p 8888:8888 -e GRANT_SUDO=yes --user root -e JUPYTER_ENABLE_LAB=yes -v /media/veracrypt5/work:/home/jovyan/ww ffff0909/qc:jsci1
+
+ 
+pip install plotly python-box
+ 
+ 
+
+d create -it -v /media/veracrypt5/qc:/qc ffff0909/qc:5moved_basic 
+ 
+
+ 
+find location of a command:   type -a 
+list only directories: ls -d */
+ls *.json | g B | xargs -t cp -t /qc
+
+
+
+while inotifywait -e close_write /qc/MovingAverageCrossAlgorithm2d.py; do rd; cp $DB/BasicTemplateFrameworkAlgorithm.json /qc; python /qc/QCtoPlotly5-docker.py; done
+while inotifywait -e close_write /qc/QCtoPlotly5-docker.py; do python /qc/QCtoPlotly5-docker.py; done
+while inotifywait -e close_write /qc/QuandlImporterAlgorithm.py; do rd; cp $DB/BasicTemplateFrameworkAlgorithm.json /qc; python /qc/QCtoPlotly5-docker.py; done
+
+apt install vim 
+apt install vim-gui-common vim-runtime
+set cursorline
+autocmd InsertEnter * highlight CursorLine guifg=white guibg=blue ctermfg=white ctermbg=blue
+autocmd InsertLeave * highlight CursorLine guifg=white guibg=darkblue ctermfg=white ctermbg=darkblue
+ set laststatus=2?
+ 
+  vim /root/Lean/Common/Packets/Controls.cs
+ MaximumDataPointsPerChartSeries = 400000; # didnt need this?
+ rebuild
+ vim /root/Lean/Algorithm/QCAlgorithm.Plotting.cs
+ Error("Exceeded maximum series count: Each backtest can have up to 10 series in total.");
+if (seriesCount > 1000)
+
+Kubuntu window rules: remember position all
+
+kdocker/cosmic 5.0-1 amd64
+  lets you dock any application into the system tray
+
+
+sudo apt purge chromium-browser 
+
+pip install selenium?
+sudo apt install chromium-chromedriver (was uninstalled when Chrome made portable?) 230mb
+sudo apt install python3-pip 77mb
+export PATH=$PATH:/usr/lib/chromium-browser/  You may add the above line to your /home/<user>/.profile file to make it permanent.
+
+version=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+wget -qP "/tmp/" "https://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip"
+sudo unzip -o /tmp/chromedriver_linux64.zip -d /usr/bin
+
+ls -alR | less
+find ./ -printf "%TY-%Tm-%Td\t%s\t%p\n" | more
+
+descend into write-protected directory... just use sudo
+ 
+.config/mimeapps.list
+inode/directory=org.kde.krusader.desktop;
+
+echo  konsole -e bash -c "inotifywait -mr --exclude '(.chromium)' -e modify -e create -e delete  ~/.config ~/.kde" >> /etc/init.d/myscript
+chmod +x /etc/init.d/myscript
+update-rc.d myscript defaults
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+todo:
+swapoff again?
+python 2 default.. alias python=python3
+
+
+
+
+
