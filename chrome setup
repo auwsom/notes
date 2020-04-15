@@ -24,48 +24,203 @@ inotifywait -mr -e modify -e create -e delete -e CLOSE_WRITE .
 Bookmarks Organizer Offered by: kadaj, fucked up the order cant get back
 
 
-aapocclcgogkmnckokdopfmhonfmgoek : Slides : version 0_10
-adakfpemmbngeohfigfpldjimamijoek : Settings Button : version 0_2
-ahfgeienlihckogmohjhadlkjgocpleb : Web Store : version 0_2
-ahjaciijnoiaklcomgnblndopackapon : Identity API Scope Approval UI : version 1_1
-aohghmighlieiainnegkcijnfilokake : Docs : version 0_10
-apdfllckaahabafndbhieahigkjlhalf : Google Drive : version 14_2
-blpcfgokakmgnkcojhhkbfbldkacnbeo : YouTube : version 4_2_8
-cfohepagpmnodfdmjliccbbigdkfcgia : Location Guard : version 2_4_0
-cjpalhdlnbpafiamejdnhcphjbkeiagm : uBlock Origin : version 1_24_4
-cmeckkgeamghjhkepejgjockldoblhcb : Export links of all extensions : version 1_4
-cobieddmkhhnbeldhncnfcgcaccmehgn : CLUT: Cycle Last Used Tabs : version 1_6
-dkcdcmananochmgmhgkhhmgegdnkgejl : Bookmark My Tabs : version 1_0_0
-eaabmhkokgaboihbikohlooneokghmcp : Bookmarks Table : version 0_6
-eookhngofldnbnidjlbkeecljkfpmfpg : better-onetab : version 1_4_7
-fdpohaocaechififmbbbbbknoalclacl : Full Page Screen Capture : version 6_5
-felcaaldnbdncclmgdcncolpebgiejap : Sheets : version 1_2
-ffieaadkkhencgelmgbbmkkipeocbcbg : Bookmarks Button : version 1_3
-fhcgjolkccmbidfldomjliifgaodjagh : Cookie AutoDelete : version 3_1_1
-fmhmiaejopepamlcjkncpgpdjichnecm : KeePass Tusk - Password Access and Autofill : version 2018_9_27
-fofpnhmbgmmeaialapfddhbhfongoinh : History Button : version 1_0_1
-gfdkimpbcpahaombhbimeihdjnejgicl : Feedback : version 1_0
-ghbmnnjooekpmoecnnnilnnbdlolhkhi : Google Docs Offline : version 1_9_1
-heeoeadndnhebmfebjccbhmccmaoedlf : Focus Indicator : version 3_0_0
-hfpnjihjndnmfcbclplooodjmhcdncan : Extensions Button : version 0_2
-iaiomicjabeggjcfkbimgmglanimpnae : Tab Session Manager : version 6_0_0
-ieehkmoiljghfkejgahoheemdjpdinml : Undo Closed Tabs Button : version 0_1_6
-jjchodckpgecejjbbdedboikbidieebe : Reopen closed tab Button™ : version 0_9_1_3
-kaalofacklcidaampbokdplbklpeldpj : Wide Github : version 1_4_1
-kafbpkaodnkapgalobfodcpbioffcngc : Speak : version 4
-kgadgjmlofjccpefhdagbonmohjknlll : Markdown Linker : version 0_2_4
-kmendfapggjehodndflmmgagdbamhnfd : CryptoTokenExtension : version 0_9_74
-ldlghkoiihaelfnggonhjnfiabmaficg : QuicKey – The quick tab switcher : version 1_4_0
-lkglfdjcamhjoggmabobhggmpfjhccff : TidyTab : version 3_0_0
-lpleipinonnoibneeejgjnoeekmbopbc : Extensions Manager (aka Switcher) : version 0_2_1_2
-mfehgcgbbipciphmccgaenjidiccnmng : Cloud Print : version 0_1
-mhjfbmdgcfjbbpaeojofohoefgiehjai : Chrome PDF Viewer : version 1
-mmdmdndlbdblbjdphkpfbcpfmfjlcfjk : Bookmarks by date : version 1_2
-neajdppkdcdipfabeoofebfddakdcjhd : Google Network Speech : version 1_0
-nkeimhogjdpnpccoofpliimaahmaaome : Google Hangouts : version 1_3_15
-nmmhkkegccagdldgiimedpiccmgmieda : Chrome Web Store Payments : version 1_0_0_5
-ohhpijmpbgndokpodomgiclmflhbkihb : Starmarks Bookmark Manager : version 0_1_2
-oifbkkngkecdhnohciofdofiihdjciip : Copy as Markdown Quotation : version 0_5_0
-pjkljhegncpnkpknbcohdijeoejaedia : Gmail : version 8_2
-pkedcjkdefgpdelpbcmbmeomcjbeemfm : Chrome Media Router : version 8220_313_1_1
-pkehgijcmpdhfbdbbnkijodmdjhbjlgp : Privacy Badger : version 2020_2_19
+<!--
+......................................................
+                     Enabled
+......................................................
+
+better-onetab
+https://chrome.google.com/webstore/detail/eookhngofldnbnidjlbkeecljkfpmfpg
+
+Bookmark My Tabs
+https://chrome.google.com/webstore/detail/dkcdcmananochmgmhgkhhmgegdnkgejl
+
+Bookmarks Button
+https://chrome.google.com/webstore/detail/ffieaadkkhencgelmgbbmkkipeocbcbg
+
+Bookmarks by date
+https://chrome.google.com/webstore/detail/mmdmdndlbdblbjdphkpfbcpfmfjlcfjk
+
+Bookmarks Table
+https://chrome.google.com/webstore/detail/eaabmhkokgaboihbikohlooneokghmcp
+
+CLUT: Cycle Last Used Tabs
+https://chrome.google.com/webstore/detail/cobieddmkhhnbeldhncnfcgcaccmehgn
+
+Cookie AutoDelete
+https://chrome.google.com/webstore/detail/fhcgjolkccmbidfldomjliifgaodjagh
+
+Copy as Markdown Quotation
+https://chrome.google.com/webstore/detail/oifbkkngkecdhnohciofdofiihdjciip
+
+Docs
+https://chrome.google.com/webstore/detail/aohghmighlieiainnegkcijnfilokake
+
+Export links of all extensions
+https://chrome.google.com/webstore/detail/cmeckkgeamghjhkepejgjockldoblhcb
+
+Extensions Button
+https://chrome.google.com/webstore/detail/hfpnjihjndnmfcbclplooodjmhcdncan
+
+Extensions Manager (aka Switcher)
+https://chrome.google.com/webstore/detail/lpleipinonnoibneeejgjnoeekmbopbc
+
+Focus Indicator
+https://chrome.google.com/webstore/detail/heeoeadndnhebmfebjccbhmccmaoedlf
+
+Full Page Screen Capture
+https://chrome.google.com/webstore/detail/fdpohaocaechififmbbbbbknoalclacl
+
+Gmail
+https://chrome.google.com/webstore/detail/pjkljhegncpnkpknbcohdijeoejaedia
+
+Google Docs Offline
+https://chrome.google.com/webstore/detail/ghbmnnjooekpmoecnnnilnnbdlolhkhi
+
+Google Drive
+https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf
+
+History Button
+https://chrome.google.com/webstore/detail/fofpnhmbgmmeaialapfddhbhfongoinh
+
+KeePass Tusk - Password Access and Autofill
+https://chrome.google.com/webstore/detail/fmhmiaejopepamlcjkncpgpdjichnecm
+
+Location Guard
+https://chrome.google.com/webstore/detail/cfohepagpmnodfdmjliccbbigdkfcgia
+
+Markdown Linker
+https://chrome.google.com/webstore/detail/kgadgjmlofjccpefhdagbonmohjknlll
+
+Privacy Badger
+https://chrome.google.com/webstore/detail/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
+
+QuicKey – The quick tab switcher
+https://chrome.google.com/webstore/detail/ldlghkoiihaelfnggonhjnfiabmaficg
+
+Reopen closed tab Button™
+https://chrome.google.com/webstore/detail/jjchodckpgecejjbbdedboikbidieebe
+
+Settings Button
+https://chrome.google.com/webstore/detail/adakfpemmbngeohfigfpldjimamijoek
+
+Sheets
+https://chrome.google.com/webstore/detail/felcaaldnbdncclmgdcncolpebgiejap
+
+Slides
+https://chrome.google.com/webstore/detail/aapocclcgogkmnckokdopfmhonfmgoek
+
+Speak
+https://chrome.google.com/webstore/detail/kafbpkaodnkapgalobfodcpbioffcngc
+
+Starmarks Bookmark Manager
+https://chrome.google.com/webstore/detail/ohhpijmpbgndokpodomgiclmflhbkihb
+
+Tab Session Manager
+https://chrome.google.com/webstore/detail/iaiomicjabeggjcfkbimgmglanimpnae
+
+TidyTab
+https://chrome.google.com/webstore/detail/lkglfdjcamhjoggmabobhggmpfjhccff
+
+uBlock Origin
+https://chrome.google.com/webstore/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm
+
+Undo Closed Tabs Button
+https://chrome.google.com/webstore/detail/ieehkmoiljghfkejgahoheemdjpdinml
+
+Wide Github
+https://chrome.google.com/webstore/detail/kaalofacklcidaampbokdplbklpeldpj
+
+YouTube
+https://chrome.google.com/webstore/detail/blpcfgokakmgnkcojhhkbfbldkacnbeo
+
+
+
+......................................................
+                     Disabled
+......................................................
+
+Auto Ad Mute
+https://chrome.google.com/webstore/detail/hljoencdappihmlkilchbhcjoldimkbn
+
+Bitwarden - Free Password Manager
+https://chrome.google.com/webstore/detail/nngceckbapebfimnlniiiahkandclblb
+
+Block image
+https://chrome.google.com/webstore/detail/pehaalcefcjfccdpbckoablngfkfgfgj
+
+BNTP: Bookmarks in New Tab Page
+https://chrome.google.com/webstore/detail/feeleilgbmkkpapllljmclmbeddcdeeh
+
+Bookmarks New Tab
+https://chrome.google.com/webstore/detail/njfnhkobpepaoogpflmbmiefmnlhkgjn
+
+CKP - KeePass integration for Chrome™
+https://chrome.google.com/webstore/detail/lnfepbjehgokldcaljagbmchhnaaogpc
+
+Clear Cache
+https://chrome.google.com/webstore/detail/cppjkneekbjaeellbfkmgnhonkkjfpdn
+
+Desktop Notifications for Stack Exchange
+https://chrome.google.com/webstore/detail/ijglncoabcgieiokjmgdogpefdblmnle
+
+Go Back With Backspace
+https://chrome.google.com/webstore/detail/eekailopagacbcdloonjhbiecobagjci
+
+History Limiter Custom
+https://chrome.google.com/webstore/detail/ibpfkplbhnbiklpjacjbaelahebmbmpp
+
+Image Downloader
+https://chrome.google.com/webstore/detail/cnpniohnfphhjihaiiggeabnkjhpaldj
+
+Improve YouTube! (Open-Source for YouTube)
+https://chrome.google.com/webstore/detail/bnomihfieiccainjcjblhegjgglakjdd
+
+KeePassXC-Browser
+https://chrome.google.com/webstore/detail/oboonakemofpalcgghocfoadofidjkkk
+
+LastPass: Free Password Manager
+https://chrome.google.com/webstore/detail/hdokiejnpimakedhajhdlcegeplioahd
+
+Live Server Web Extension
+https://chrome.google.com/webstore/detail/fiegdmejfepffgpnejdinekhfieaogmj
+
+Mailvelope
+https://chrome.google.com/webstore/detail/kajibbejlbohfaggdiogboambcijhkke
+
+Mymail-Crypt for Gmail™
+https://chrome.google.com/webstore/detail/jcaobjhdnlpmopmjhijplpjhlplfkhba
+
+Save to Google Drive
+https://chrome.google.com/webstore/detail/gmbmikajjgmnabiglmofipeabaddhgne
+
+SearchBar
+https://chrome.google.com/webstore/detail/fjefgkhmchopegjeicnblodnidbammed
+
+Self-Destructing Cookies
+https://chrome.google.com/webstore/detail/igdpjhaninpfanncfifdoogibpdidddf
+
+Session Buddy
+https://chrome.google.com/webstore/detail/edacconmaakjimmfgnblocblbcdcpbko
+
+Shortkeys (Custom Keyboard Shortcuts)
+https://chrome.google.com/webstore/detail/logpjaacgmcbpdkdchjiaagddngobkck
+
+Tampermonkey
+https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo
+
+User-Agent Switcher for Chrome
+https://chrome.google.com/webstore/detail/djflhoibgkdhkhhcedjiklpkjnoahfmg
+
+Video Blocker
+https://chrome.google.com/webstore/detail/kkgpdmegkhdheglikjleejknplhdpbck
+
+Vimium
+https://chrome.google.com/webstore/detail/dbepggeogbaibhgnhhndojpepiihcmeb
+
+WrapAPI
+https://chrome.google.com/webstore/detail/fmnddkfmloenccahfiaflnkpngndkafm
+
+XPath Helper
+https://chrome.google.com/webstore/detail/hgimnogjllphhhkhlmebbmlgjoejdpjl
+-->
