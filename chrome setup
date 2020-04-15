@@ -3,5 +3,5 @@ ublock:  restore backup file
  advanced
  whitelist cloud.net
  allow all 1st party, block all 3rd party
-ghostery:
+settings > Privacy > site settings > notifs > blocked
  
