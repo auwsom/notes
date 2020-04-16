@@ -13,7 +13,7 @@ quickeys, shortkeys
 undo closed tabs button: 20 limit
 location guard; fixed seattle or high
 focus indicator: 4
-Site access, on click: amrkdown, 
+Site access, on click: amrkdown, markdown linker
 
 chrome://extensions/shortcuts
 tusk: cttl+shft+spac
