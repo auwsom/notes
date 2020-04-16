@@ -1,6 +1,6 @@
 sync extensions
 ublock:  restore backup file
- advanced,  whitelist cloud.net,  allow all 1st party, block all 3rd party
+ advanced,  whitelist cloudfront.net,  allow all 1st party, block all 3rd party
 cookie autodel: listofexpressions export import
 settings > Privacy > site settings > notifs > blocked
 
@@ -12,6 +12,7 @@ quickeys, shortkeys
 undo closed tabs button: 20 limit
 location guard; fixed seattle or high
 focus indicator: 4
+Site access, on click: amrkdown, 
 
 chrome://extensions/shortcuts
 tusk: cttl+shft+spac
@@ -26,6 +27,8 @@ https://superuser.com/questions/1180286/google-chrome-bookmark-folders-can-you-u
 
 "Export links of all extensions": 
 https://chrome.google.com/webstore/detail/export-links-of-all-exten/cmeckkgeamghjhkepejgjockldoblhcb?hl=en
+Multilink - open list of links from page source extensions links export
+https://chrome.google.com/webstore/detail/multilink/hakpaefefpemiaahboigpjchbmgkejaj?hl=en
 <!--
 ......................................................
                      Enabled
