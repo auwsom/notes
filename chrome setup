@@ -4,8 +4,8 @@ ublock:  restore backup file
  blocked frames: superuser.com##.js-dismissable-hero.ps-relative.sm\:pb24.sm\:pt24.fc-black-200.bg-black-750.py24
 cookie autodel: listofexpressions export import
 settings > Privacy > site settings > notifs > blocked
-disable address autocomplete: {google:baseURL}search?q=%s&hl=en  default search engine
-
+disable web address autocomplete: {google:baseURL}search?q=%s&hl=en  default search engine
+disable email address autocomplete: disable autofill in settings
 extensions:
 ext allow in incog:
  ublock, badger?, quickey, cookie autodel, tusk, markdown
