@@ -2,44 +2,51 @@
 efibootmgr -o 4,1   efibootmgr -b 9 -B
 /etc/grub.d/40_custom
 Alt F2: KRunner can search settings: Alt+Space
-terminal paste is middle mouse button, change shortcuts in Menu:Settings:Shortcuts
-undo: C-xu, delete next:  alt+d
-pageup: Shift + PageUp
+terminal: paste is middle mouse button, change shortcuts in Menu:Settings:Shortcuts
+  undo: C-xu, delete next: alt+d
+  pageup: Shift + PageUp
+  history search: ctrl+R
 apt-get clean
 apt-get autoremove
-sudo cat /dev/null > /var/log/kern.log
-term history: ctrl+R
+clear log for memory: sudo cat /dev/null > /var/log/kern.log
 blkid, lsblk, fdisk -l, df -lh, 
-rm -r mydir
-journalctl --vacuum-size=50M
-SystemMaxUse=50M
-shutdown.sh: shutdown -r now or /sbin/reboot
-sudo chown -R root:root /home/abc/reboot.sh
+(in aliases) rm -r mydir; mkdir -p; use info instead of man; h='--help'; bash $h
 dolphin: panels: terminal F4
-use info instead of man
-symlink without a terminal, just hold Shift+Ctrl and drag the file
 chmod -R 777; #!/bin/sh
 !!, !$, cd -, ll, less (q), alias, yes|, tree /dir |less, pushd popd
 locate, find . -name abc -type d -exec rm -r {} \;, **/ (zsh), egrep or grep -E, diff, more
-alias cd.='cd /home/abc'
-h='--help'; bash $h
-type man:systemctl into your browser url bar
+cd ~ goes to /home/abc
+type man:systemctl into your browser url bar (?)
+!! symlink without a terminal, just hold Shift+Ctrl and drag the file
 
+APT INSTALLS:
+install Tilde editor, vbox, xscreensaver, BackInTime
+sudo apt-get install yubikey-personalization yubikey-personalization-gui
+(dont know if need to install applist before moving user folder or not)
+sudo dpkg --set-selections < /home/abc/installed_software.txt
+apt-mark showmanual > appList
+sudo apt install qemu-utils or qemu-kvm
+echo 'apt-get install gufw, redshift-gtk, plasma-applet-redshift-control, tilde, easystroke, xscreensaver, gnome-disk-utility, backintime-qt4, git, qemu-utils, qdirstat, gparted' > appList
+apt-get install $(cat appList)
+apt-get remove --purge libreoffice*
+uname -r; dpkg --list 'linux-image*'; apt purge linux-image-x.x.x-x-generic; update-grub
+sudo apt-get install xscreensaver-gl-extra xscreensaver-data-extra
 
+CHANGES FROM INSTALL:
 display>resolution
+# /usr/share/applications/redshift-gtk.desktop add Exec=redshift-gtk -l 47.6:122.2
+scroll amount: replug mouse reciever: https://ubuntuforums.org/showthread.php?t=2341374, logout/in, resetmsmice
+
+IN HOME:
 icons: columns, small-med
-updates
 pin to task manager, sort by activity (buggy)
 FM view details
 Settings: cursor snow, single click,
-Removable Storage -> Removable Devices ->  automatically
+Removable Storage -> Removable Devices -> automatically
 Kwallet: empty password
-install gufw, redshift-gtk, Vbox, Tilde editor, vbox, xscreensaver, disks gnome, BackInTime
-/usr/share/applications/redshift-gtk.desktop add Exec=redshift-gtk -l 47.6:122.2
 numlock: System Settings > Hardware > Input Devices > Keyboard
-FF>prefs: restore previous session, Delete cookies and site data when Firefox is closed
-about:config:browser.zoom.siteSpecific
-scroll amount: replug mouse reciever: https://ubuntuforums.org/showthread.php?t=2341374, logout/in, resetmsmice
+? FF>prefs: restore previous session, Delete cookies and site data when Firefox is closed
+? about:config:browser.zoom.siteSpecific
 move Show Desktop to the right, lock widgets
 widgets: redshift control, system load, clock show date,
 task manager icons: right clcik 'alternatives'
@@ -50,6 +57,8 @@ win actions: focus mouse
 System Settings > Workspace > Shortcuts > Global Keyboard shortcuts In KDE component choose KWin
 minimize all, screen edges: https://www.reddit.com/r/kde/comments/5sel7m/is_there_a_proper_minimize_all_windows_keyboard/
 settings>task switcher options:
+
+
 special window application settings remember position, size: notes, settigns, FM
 drivers usb ethernet: https://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131
 settings: virtutal desktops: 2
@@ -195,7 +204,6 @@ Window Quick Tile Top Right=Meta+Num+9,none,Quick Tile Window to the Top Right
 replication: 
 VBoxManage clonehd ku1810.vhd ku1810.vdi --format vdi
 close VBox
-sudo apt install qemu-utils or qemu-kvm
 sudo modprobe nbd
 ?modprobe nbd max_part=16
 sudo qemu-nbd -c /dev/nbd0 /media/abc/6vhds/ku1810.vdi
@@ -216,19 +224,11 @@ sudo chown -R $USER:$USER /home/abc
 sudo chown -R abc:abc /home/abc
 Doing Host + F1 took me to the Ctrl + Alt + F1 screen in the VM
 
-(dont know if need to install applist before moving user folder or not)
-sudo dpkg --set-selections < /home/abc/installed_software.txt
-apt-mark showmanual > appList
-echo 'apt-get install gufw, redshift-gtk, plasma-applet-redshift-control, tilde, easystroke, xscreensaver, gnome-disk-utility, backintime-qt4, git, qemu-utils, qdirstat, gparted' > appList
-apt-get install $(cat appList)
-
-
-apt-get remove --purge libreoffice*
 VBoxManage modifyhd ku1810.vdi --resize 15000
 http://derekmolloy.ie/resize-a-virtualbox-disk/ 
 http://sourceforge.net/projects/gparted/files/gparted-live-stable/
 
-windows:
+Windows:
 Compact.exe /CompactOS:always
 delete windows:infusedapps,livekernelreports,SoftwareDistribution
 mklink /j "C:\ProgramData" "D:\ProgramData"
@@ -260,8 +260,6 @@ After virtualbox:
 https://forum.manjaro.org/t/kde-taskbar-icons-are-too-small-not-system-tray/73533 "in the right corner there is a click area on it, a menu will appear, just select the height of the area and change the size either up or down"
 System Settings → Window Behaviour → Window Rules. ‘New…’ button. ‘Size & Position’: normal
 window rules: dialog and utility
-uname -r; dpkg --list 'linux-image*'; apt purge linux-image-x.x.x-x-generic; update-grub
-sudo apt-get install xscreensaver-gl-extra xscreensaver-data-extra
 mouse gestures in KDE bug https://bugs.kde.org/show_bug.cgi?id=343383 use EasyStroke
 Notifications: disable Discover popup (blocks other notifs)
 Plasma Search (krunner): disable software center, etc..
@@ -283,7 +281,6 @@ SDA8:
 
 
 on this backup partition kub1?:
-sudo apt-get install yubikey-personalization yubikey-personalization-gui
 chromium Settings-->Show Advanced Settings-->Background Apps and uncheck the "Continue running background apps when Chromium is closed" option.
 tips: nano, win-m to make mouse work
 
