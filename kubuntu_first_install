@@ -3,12 +3,10 @@ SystemMaxUse=50M
 echo 'shutdown -r now' > ~/scripts/reboot.sh # or /sbin/reboot
 sudo chown -R root:root /home/abc/scripts/reboot.sh
 # run bash setup  mkdir -p
-# in kickstart: 
-# install vim, pv, gufw, virt-manager, gnome-disk-utility, gparted, gedit, redshift-gtk, plasma-applet-redshift-control, and  # (auto nice daemon)
-, bzip2, cpulimit, extundelete, inotify-tools, qdirstat, keepass2, keepassxc, krusader, kdocker, mdadm, ncdu, rclone, testdisk, tree, wipe, wmctrl
-xdotool, yubikey-personalization, yubikey-personalization-gui
-resetmsmice, system-config-kickstart, 
-docker.io, git, mono-complete, python-simplejson,python3-pip,python3-selenium, wine64, winetricks
+# in kickstart:  # (auto nice daemon)
+# install vim, pv, gufw, virt-manager, gnome-disk-utility, gparted, gedit, redshift-gtk, plasma-applet-redshift-control, and, bzip2, cpulimit, extundelete, inotify-tools, qdirstat, keepass2, keepassxc, krusader, kdocker, mdadm, ncdu, rclone, testdisk, tree, wipe, wmctrl, xdotool, yubikey-personalization, yubikey-personalization-gui, system-config-kickstart, easystroke, meld 
+docker.io, mono-complete, , resetmsmice
+python-simplejson,python3-pip,python3-selenium, wine64, winetricks, git, 
 gdebi-core # install deb files
 
 
@@ -23,15 +21,12 @@ bcompare
 clonezilla
 diffutils
 duplicati
-easystroke
 fastboot
 findutils
-gdebi-core
 gtk-sharp2
 gvfs-bin
 kdenlive
 localepurge
-meld
 net-tools
 os-prober
 pavucontrol
