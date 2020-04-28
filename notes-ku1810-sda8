@@ -26,11 +26,15 @@ sudo apt-get install yubikey-personalization yubikey-personalization-gui
 sudo dpkg --set-selections < /home/abc/installed_software.txt
 apt-mark showmanual > appList
 sudo apt install qemu-utils or qemu-kvm
-echo 'apt-get install gufw, redshift-gtk, plasma-applet-redshift-control, tilde, easystroke, xscreensaver, gnome-disk-utility, backintime-qt4, git, qemu-utils, qdirstat, gparted' > appList
+echo 'apt-get install, tilde, easystroke, xscreensaver, backintime-qt4, git, qdirstat,' > appList
 apt-get install $(cat appList)
 apt-get remove --purge libreoffice*
 uname -r; dpkg --list 'linux-image*'; apt purge linux-image-x.x.x-x-generic; update-grub
 sudo apt-get install xscreensaver-gl-extra xscreensaver-data-extra
+sudo dpkg -l > installed_software.txt
+apt-mark showmanual > appList
+......git, qemu-utils (convert VHDs), .. , wine
+https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux
 
 CHANGES FROM INSTALL:
 display>resolution
@@ -138,12 +142,6 @@ https://ubuntu-mate.community/t/stop-network-disconnecting-in-ubuntu/829 etc/ava
 backup: 
 rsync --progress /home/abc/* /media/abc/iprogs/kubuntu
 Auostart: Back In Time root
-sudo dpkg -l > installed_software.txt
-apt-mark showmanual > appList
-
-added since vdi:
-......git, qemu-utils, qdirstat.. gparted, zulucrypt, wine, gedit
-https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux
 
 
 
