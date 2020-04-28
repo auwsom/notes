@@ -1,2 +1,12 @@
 journalctl --vacuum-size=50M
 SystemMaxUse=50M
+echo 'shutdown -r now' > ~/scripts/reboot.sh # or /sbin/reboot
+sudo chown -R root:root /home/abc/scripts/reboot.sh
+# run bash setup  mkdir -p
+# in kickstart: 
+# install gufw, redshift-gtk, virt-manager, gnome-disk-utility, gparted, gedit, plasma-applet-redshift-control, and  # (auto nice daemon)
+cpulimit, extundelete, inotify-tools
+
+
+apt-get clean
+apt-get autoremove
